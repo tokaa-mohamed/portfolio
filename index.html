@@ -13,6 +13,9 @@
 
     <nav class="navbar">
         <div class="logo">Toka<span>.Dev</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -35,7 +38,6 @@
             <div class="floating-icons">
                 <i class="fab fa-flutter"></i>
                 <i class="fab fa-dart"></i>
-                <i class="fas fa-code"></i>
             </div>
         </div>
     </section>
@@ -43,9 +45,8 @@
     <section id="skills" class="skills">
         <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
         <div class="skills-container">
-            <!-- Mobile & Architecture Skills -->
             <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fab fa-flutter main-icon"></i>
+                <i class="fas fa-mobile-alt main-icon"></i>
                 <h3>Mobile & Architecture</h3>
                 <ul>
                     <li>Flutter Framework & Dart</li>
@@ -57,7 +58,6 @@
                 </ul>
             </div>
 
-            <!-- Backend & Infrastructure Skills -->
             <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-server main-icon"></i>
                 <h3>Backend & Tools</h3>
@@ -72,12 +72,9 @@
         </div>
     </section>
 
-    <!-- 📌 تم تحديث قسم الخبرات والتعليم هنا -->
     <section id="experience" class="experience">
         <h2 class="section-title" data-aos="fade-up">Experience & Education</h2>
         <div class="timeline">
-            
-            <!-- 1. Cairo Book Fair App -->
             <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-date">Volunteering</div>
                 <div class="timeline-content">
@@ -86,7 +83,6 @@
                 </div>
             </div>
 
-            <!-- 2. Zoor Mobile App -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
                 <div class="timeline-date">2024 - 2025</div>
                 <div class="timeline-content">
@@ -95,7 +91,6 @@
                 </div>
             </div>
 
-            <!-- 3. Frontend Intern at NTI -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
                 <div class="timeline-date">Jul 2024 - Sep 2024</div>
                 <div class="timeline-content">
@@ -104,7 +99,6 @@
                 </div>
             </div>
 
-            <!-- 4. Education -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
                 <div class="timeline-date">Present</div>
                 <div class="timeline-content">
@@ -112,15 +106,12 @@
                     <p>New Cairo Technological University - Fourth-year student with Distinction grades.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="projects" class="projects">
         <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
         <div class="projects-grid">
-            
-            <!-- 1. مشروع Rafiq App -->
             <div class="project-card" data-aos="flip-up">
                 <div class="phone-mockup">
                     <div class="screen">
@@ -139,7 +130,6 @@
                 </div>
             </div>
 
-            <!-- 2. مشروع Cairo Book Fair -->
             <div class="project-card" data-aos="flip-up" data-aos-delay="100">
                 <div class="phone-mockup">
                     <div class="screen">
@@ -158,7 +148,6 @@
                 </div>
             </div>
 
-            <!-- 3. مشروع E-Commerce App -->
             <div class="project-card" data-aos="flip-up" data-aos-delay="200">
                 <div class="phone-mockup">
                     <div class="screen">
@@ -176,7 +165,6 @@
                     <span>REST API</span>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -194,6 +182,23 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 800, once: true }); </script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Toggle Mobile Menu
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
