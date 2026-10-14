@@ -19,7 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= Navbar ================= */
+/* ===== Navbar ===== */
 .navbar {
     display: flex; 
     justify-content: space-between; 
@@ -30,6 +30,7 @@ body {
     z-index: 1000;
     background: rgba(11, 14, 20, 0.85); 
     backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo { 
@@ -52,7 +53,7 @@ body {
 .nav-links a { 
     text-decoration: none; 
     color: white; 
-    font-size: 0.95rem; 
+    font-size: 0.9rem; 
     transition: 0.3s; 
 }
 
@@ -60,61 +61,35 @@ body {
     color: var(--accent); 
 }
 
-/* إخفاء زر المنيو إجبارياً للشاشات الكبيرة */
-.navbar .menu-toggle,
-.menu-toggle {
-    display: none !important;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    color: var(--accent);
-}
-
-/* ================= Hero Section ================= */
+/* ===== Hero Section ===== */
 .hero {
-    min-height: 100vh; 
+    height: 100vh; 
     display: flex; 
     align-items: center; 
-    justify-content: space-between;
-    padding: 120px 8% 60px;
+    padding: 0 10%;
     background: radial-gradient(circle at 80% 20%, #1e293b, #0b0e14);
-    gap: 40px;
-}
-
-.hero-content { 
-    flex: 1; 
-    max-width: 650px; 
 }
 
 .hero-content h1 { 
-    font-size: 3.2rem; 
+    font-size: 3.5rem; 
     font-weight: 800; 
-    line-height: 1.2; 
+    line-height: 1.1; 
     margin-bottom: 20px; 
-}
-
-.hero-content p { 
-    font-size: 1.1rem; 
-    color: var(--text-dim); 
-    margin-bottom: 30px; 
 }
 
 .highlight { 
     color: var(--accent); 
 }
 
-.cta-buttons { 
-    display: flex; 
-    gap: 15px; 
-    flex-wrap: wrap; 
+.hero-content p {
+    color: var(--text-dim);
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
 .btn {
-    padding: 14px 28px; 
+    padding: 14px 30px; 
     border-radius: 50px; 
     text-decoration: none;
     font-weight: 600; 
@@ -125,6 +100,7 @@ body {
 .primary { 
     background: var(--accent); 
     color: #000; 
+    margin-right: 15px; 
 }
 
 .secondary { 
@@ -137,42 +113,28 @@ body {
     box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3); 
 }
 
-.hero-visual { 
-    flex: 1; 
-    display: flex; 
-    justify-content: center; 
+/* ===== Skills Section ===== */
+.skills { 
+    padding: 100px 10%; 
+    background: rgba(255,255,255,0.01); 
 }
 
-.floating-icons { 
-    font-size: 3rem; 
-    color: var(--accent); 
-    display: flex; 
-    gap: 20px; 
-}
-
-/* ================= Sections Common ================= */
 .section-title { 
     text-align: center; 
-    font-size: 2.2rem; 
-    margin-bottom: 50px; 
-}
-
-/* ================= Skills Section ================= */
-.skills { 
-    padding: 80px 8%; 
-    background: rgba(255,255,255,0.01); 
+    font-size: 2.5rem; 
+    margin-bottom: 60px; 
 }
 
 .skills-container { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px; 
 }
 
 .skill-card {
     background: var(--glass); 
-    padding: 35px; 
-    border-radius: 20px;
+    padding: 40px; 
+    border-radius: 25px;
     border: 1px solid rgba(255,255,255,0.1); 
     transition: 0.3s;
 }
@@ -180,6 +142,7 @@ body {
 .skill-card:hover { 
     border-color: var(--accent); 
     transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
 }
 
 .main-icon { 
@@ -188,39 +151,52 @@ body {
     margin-bottom: 20px; 
 }
 
+.skill-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
 .skill-card ul { 
     list-style: none; 
     padding: 0; 
-    margin: 0; 
+    margin: 0;
 }
 
 .skill-card li { 
     margin-bottom: 12px; 
     color: var(--text-dim); 
+    display: flex;
+    align-items: center;
 }
 
-/* ================= Experience Section ================= */
+.skill-card li::before {
+    content: "▹";
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+/* ===== Experience & Education Section ===== */
 .experience { 
-    padding: 80px 8%; 
+    padding: 100px 10%; 
 }
 
 .timeline { 
     max-width: 800px; 
     margin: 0 auto; 
     border-left: 2px solid var(--accent); 
-    padding-left: 30px; 
+    padding-left: 40px; 
 }
 
 .timeline-item { 
     position: relative; 
-    margin-bottom: 40px; 
+    margin-bottom: 60px; 
 }
 
 .timeline-item::before {
     content: ""; 
     position: absolute; 
-    left: -39px; 
-    top: 5px;
+    left: -49px; 
+    top: 0;
     width: 16px; 
     height: 16px; 
     background: var(--accent); 
@@ -234,26 +210,57 @@ body {
     margin-bottom: 5px; 
 }
 
-/* ================= Projects Section ================= */
+.timeline-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.timeline-content p {
+    color: var(--text-dim);
+    margin: 0;
+}
+
+/* ===== Projects Section ===== */
 .projects { 
-    padding: 80px 8%; 
+    padding: 100px 10%; 
 }
 
 .projects-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 30px; 
+    gap: 40px; 
 }
 
 .project-card { 
     text-align: center; 
     background: var(--glass); 
-    padding: 25px; 
+    padding: 30px; 
     border-radius: 20px; 
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.4s; 
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.12);
+}
+
+.project-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Phone Mockup Styling */
 .phone-mockup {
     width: 170px; 
     height: 340px; 
@@ -263,11 +270,13 @@ body {
     position: relative; 
     overflow: hidden; 
     background: #111;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .screen { 
     width: 100%; 
     height: 100%; 
+    position: relative;
 }
 
 .screen .app-img {
@@ -275,13 +284,18 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .app-img {
+    transform: scale(1.05);
 }
 
 .play-btn {
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.8);
     width: 55px; 
     height: 55px; 
     background: var(--accent); 
@@ -290,51 +304,64 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: center;
+    font-size: 1.4rem;
     opacity: 0; 
-    transition: 0.3s; 
+    transition: all 0.3s ease; 
     text-decoration: none;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
 }
 
+.phone-mockup:hover .play-btn,
 .project-card:hover .play-btn { 
     opacity: 1; 
+    transform: translate(-50%, -50%) scale(1);
 }
 
-.tags { 
-    display: flex; 
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 6px; 
-    margin-top: 15px; 
+/* Tags Layout */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
 }
 
 .tags span { 
     font-size: 0.75rem; 
     background: rgba(0, 210, 255, 0.1); 
     color: var(--accent); 
-    padding: 5px 12px; 
-    border-radius: 5px; 
+    padding: 6px 14px; 
+    border-radius: 20px; 
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    font-weight: 500;
 }
 
-/* ================= Footer Section ================= */
+/* ===== Footer ===== */
 footer { 
-    padding: 60px 8%; 
+    padding: 80px 10%; 
     text-align: center; 
 }
 
 .glass-footer { 
-    padding: 40px 20px; 
+    padding: 60px; 
     background: var(--glass); 
-    border-radius: 30px; 
+    border-radius: 40px; 
     border: 1px solid rgba(255,255,255,0.1); 
 }
 
+.glass-footer h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
 .social-links { 
-    margin-bottom: 20px; 
+    margin: 25px 0; 
 }
 
 .social-links i { 
     font-size: 1.8rem; 
-    margin: 0 12px; 
+    margin: 0 15px; 
     color: white; 
     transition: 0.3s; 
 }
@@ -344,88 +371,30 @@ footer {
     transform: scale(1.2); 
 }
 
-/* ================= 📱 Responsive Media Queries ================= */
-
-/* iPad & Tablets (1024px and below) */
-@media (max-width: 1024px) {
-    .hero { 
-        flex-direction: column; 
-        text-align: center; 
-        justify-content: center; 
-    }
-    
-    .hero-content h1 { 
-        font-size: 2.8rem; 
-    }
-    
-    .cta-buttons { 
-        justify-content: center; 
-    }
-}
-
-/* Mobile & Small Tablets (768px and below) */
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-    /* إظهار زر القائمة في الموبايل */
-    .navbar .menu-toggle,
-    .menu-toggle { 
-        display: block !important; 
+    .navbar {
+        padding: 15px 5%;
     }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(11, 14, 20, 0.95);
-        backdrop-filter: blur(15px);
-        padding: 20px 0;
-        text-align: center;
-        gap: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .hero {
+        padding: 0 5%;
     }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .hero-content h1 { 
-        font-size: 2.2rem; 
+        font-size: 2.5rem; 
     }
-    
-    .hero-content p { 
-        font-size: 1rem; 
+    .nav-links { 
+        display: none; 
     }
-    
-    .section-title { 
-        font-size: 1.8rem; 
+    .skills, .experience, .projects, footer {
+        padding: 60px 5%;
     }
-    
-    .timeline { 
-        padding-left: 20px; 
+    .timeline {
+        padding-left: 25px;
     }
-    
-    .timeline-item::before { 
-        left: -29px; 
+    .timeline-item::before {
+        left: -34px;
     }
-}
-
-/* Extra Small Devices (480px and below) */
-@media (max-width: 480px) {
-    .cta-buttons { 
-        flex-direction: column; 
-        width: 100%; 
-    }
-    
-    .btn { 
-        width: 100%; 
-        text-align: center; 
-        margin-right: 0; 
-    }
-    
-    .phone-mockup { 
-        width: 150px; 
-        height: 300px; 
+    .glass-footer {
+        padding: 30px 20px;
     }
 }
