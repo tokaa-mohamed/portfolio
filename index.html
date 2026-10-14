@@ -13,9 +13,6 @@
 
     <nav class="navbar">
         <div class="logo">Toka<span>.Dev</span></div>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -27,17 +24,18 @@
 
     <section id="home" class="hero">
         <div class="hero-content" data-aos="fade-right">
-            <h1>Building <span class="highlight">Responsive</span> Mobile Experiences</h1>
-            <p>I'm Toka Mohamed, a motivated Flutter Developer passionate about building clean UIs, REST API integration, and Firebase services.</p>
+            <h1>Building <span class="highlight">Scalable</span> Mobile Experiences</h1>
+            <p>I'm Toka Mohamed, a Software Engineer specialized in Flutter, Clean Architecture, Dio, Supabase, and AI Integration.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary">View My Projects</a>
-                <a href="https://www.linkedin.com/in/toka-mohamed-01a545344/" target="_blank" class="btn secondary">LinkedIn Profile</a>
+                <a href="https://www.linkedin.com/in/toka-mohamed-34126431b/" target="_blank" class="btn secondary">LinkedIn Profile</a>
             </div>
         </div>
         <div class="hero-visual" data-aos="fade-left">
             <div class="floating-icons">
                 <i class="fab fa-flutter"></i>
                 <i class="fab fa-dart"></i>
+                <i class="fas fa-code"></i>
             </div>
         </div>
     </section>
@@ -45,28 +43,31 @@
     <section id="skills" class="skills">
         <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
         <div class="skills-container">
+            <!-- Mobile & Architecture Skills -->
             <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fas fa-mobile-alt main-icon"></i>
+                <i class="fab fa-flutter main-icon"></i>
                 <h3>Mobile & Architecture</h3>
                 <ul>
                     <li>Flutter Framework & Dart</li>
-                    <li>State Management (BLoC / Cubit)</li>
-                    <li>Clean Architecture & SOLID Principles</li>
-                    <li>Dependency Injection (GetIt)</li>
-                    <li>Unit & Widget Testing</li>
+                    <li>State Management (Cubit / BLoC / Provider)</li>
+                    <li>Clean & Feature-Based Architecture</li>
+                    <li>Auto Route & Type-Safe Navigation</li>
+                    <li>Dio Client & Interceptors</li>
                     <li>REST APIs & JSON Integration</li>
                 </ul>
             </div>
 
+            <!-- Backend, DevOps & AI Skills -->
             <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
                 <i class="fas fa-server main-icon"></i>
-                <h3>Backend & Tools</h3>
+                <h3>Backend, DevOps & AI</h3>
                 <ul>
-                    <li>FastAPI & Python</li>
-                    <li>Firebase (Auth, Firestore, Cloud Messaging)</li>
-                    <li>SQL & MySQL Database Design</li>
-                    <li>Git & GitHub Workflows</li>
-                    <li>HTML, CSS & Bootstrap</li>
+                    <li>Supabase & Firebase (Auth, Firestore, Storage)</li>
+                    <li>FastAPI & Python Basics</li>
+                    <li>Docker Containerization & CI/CD Pipelines</li>
+                    <li>AI Integration & Predictive Models</li>
+                    <li>Git & GitHub Advanced Workflows</li>
+                    <li>SQL & Database Design</li>
                 </ul>
             </div>
         </div>
@@ -75,44 +76,92 @@
     <section id="experience" class="experience">
         <h2 class="section-title" data-aos="fade-up">Experience & Education</h2>
         <div class="timeline">
+            
+            <!-- 1. Cairo Book Fair App -->
             <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-date">Volunteering</div>
                 <div class="timeline-content">
                     <h3>Mobile Developer — Cairo International Book Fair (Go App)</h3>
-                    <p>Built and launched a mobile application to streamline visitor navigation, search logic for books and publishers, and interactive hall tracking.</p>
+                    <p>Built and launched a mobile application to streamline visitor navigation, search logic for books/publishers, and hall tracking for 10,000+ active users.</p>
                 </div>
             </div>
 
+            <!-- 2. Zoor Mobile App -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
                 <div class="timeline-date">2024 - 2025</div>
                 <div class="timeline-content">
                     <h3>Flutter Developer — Zoor Mobile App</h3>
-                    <p>Developed features for a tourism-focused app, integrating Firebase Authentication and Firestore.</p>
+                    <p>Developed core features for a tourism-focused app, integrating Firebase Authentication and dynamic Firestore content management.</p>
                 </div>
             </div>
 
+            <!-- 3. Frontend Intern at NTI -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
                 <div class="timeline-date">Jul 2024 - Sep 2024</div>
                 <div class="timeline-content">
                     <h3>Frontend Intern — NTI</h3>
-                    <p>Built responsive UIs using Bootstrap and modern frontend workflows.</p>
+                    <p>Built responsive web interfaces using HTML5, CSS3, JavaScript, Bootstrap, and industry-standard frontend workflows.</p>
                 </div>
             </div>
 
+            <!-- 4. Education -->
             <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
-                <div class="timeline-date">Present</div>
+                <div class="timeline-date">Graduated 2026</div>
                 <div class="timeline-content">
                     <h3>Bachelor of Information Technology</h3>
-                    <p>New Cairo Technological University - Fourth-year student with Distinction grades.</p>
+                    <p>New Cairo Technological University (Minor in Software Engineering) — Distinction Grades.</p>
                 </div>
             </div>
+
         </div>
     </section>
 
     <section id="projects" class="projects">
         <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
         <div class="projects-grid">
+            
+            <!-- 1. Marketi E-Commerce -->
             <div class="project-card" data-aos="flip-up">
+                <div class="phone-mockup">
+                    <div class="screen">
+                        <img src="marketi.png" alt="Marketi App Screen" class="app-img">
+                    </div>
+                    <a href="https://github.com/tokaa-mohamed/marketi" target="_blank" class="play-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <h3>Marketi — Advanced E-Commerce</h3>
+                <p>Feature-based e-commerce app with Cubit, Dio network client, Auto Route, and Dark Mode support.</p>
+                <div class="tags">
+                    <span>Flutter</span>
+                    <span>Cubit</span>
+                    <span>Dio</span>
+                    <span>Auto Route</span>
+                </div>
+            </div>
+
+            <!-- 2. Habi Real Estate -->
+            <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+                <div class="phone-mockup">
+                    <div class="screen">
+                        <img src="habiii.png" alt="Habi Real Estate App Screen" class="app-img">
+                    </div>
+                    <a href="https://github.com/tokaa-mohamed/habi_real_estate" target="_blank" class="play-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <h3>Habi — Real Estate Discovery</h3>
+                <p>Property discovery app built with Supabase real-time backend, interactive map, and modular architecture.</p>
+                <div class="tags">
+                    <span>Supabase</span>
+                    <span>Cubit</span>
+                    <span>Google Maps</span>
+                    <span>Feature-First</span>
+                </div>
+            </div>
+
+            <!-- 3. Rafiq App -->
+            <div class="project-card" data-aos="flip-up" data-aos-delay="200">
                 <div class="phone-mockup">
                     <div class="screen">
                         <img src="image-rafiq-portrait.png" alt="Rafiq App Screen" class="app-img">
@@ -121,16 +170,17 @@
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <h3>Rafiq — Psychological Support</h3>
-                <p>AI-powered mental health app with video streaming, Gemini chatbot, and booking.</p>
+                <h3>Rafiq — AI-Powered App</h3>
+                <p>AI-driven ecosystem integrating FastAPI services, dynamic feeds, and state management optimization.</p>
                 <div class="tags">
-                    <span>BLoC/Cubit</span>
                     <span>Clean Arch</span>
-                    <span>SOLID</span>
+                    <span>FastAPI</span>
+                    <span>AI Integration</span>
                 </div>
             </div>
 
-            <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <!-- 4. Cairo Book Fair -->
+            <div class="project-card" data-aos="flip-up" data-aos-delay="300">
                 <div class="phone-mockup">
                     <div class="screen">
                         <img src="book-fair-app-portrait.png" alt="Cairo Book Fair App Screen" class="app-img">
@@ -140,15 +190,16 @@
                     </a>
                 </div>
                 <h3>Cairo Book Fair App</h3>
-                <p>Interactive app for book searching, hall tracking, and customized schedules.</p>
+                <p>Interactive app serving 10,000+ visitors with book searching, publisher tracking, and schedule management.</p>
                 <div class="tags">
                     <span>Feature-First</span>
-                    <span>Clean Arch</span>
-                    <span>Cubit</span>
+                    <span>BLoC/Cubit</span>
+                    <span>High Traffic</span>
                 </div>
             </div>
 
-            <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+            <!-- 5. Classic E-Commerce (Stripe) -->
+            <div class="project-card" data-aos="flip-up" data-aos-delay="400">
                 <div class="phone-mockup">
                     <div class="screen">
                         <img src="shopping-portrait.png" alt="E-Commerce App Screen" class="app-img">
@@ -157,14 +208,15 @@
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <h3>E-Commerce App</h3>
-                <p>Features Stripe payment gateway, REST API integration, and Firebase Firestore.</p>
+                <h3>E-Commerce App (Stripe & Firebase)</h3>
+                <p>Features Stripe payment gateway integration, REST API consumption, and Firebase Firestore for order management.</p>
                 <div class="tags">
                     <span>Firebase</span>
                     <span>Stripe</span>
                     <span>REST API</span>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -174,7 +226,7 @@
             <p>Based in Qalyubia, Egypt</p>
             <div class="social-links">
                 <a href="https://github.com/tokaa-mohamed" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/toka-mohamed-01a545344/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/toka-mohamed-34126431b/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:mohamedtoka781@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
             <p>Phone: 01204801744</p>
@@ -182,23 +234,6 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-
-        // Toggle Mobile Menu
-        const menuToggle = document.getElementById('mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu when link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+    <script> AOS.init({ duration: 800, once: true }); </script>
 </body>
 </html>
